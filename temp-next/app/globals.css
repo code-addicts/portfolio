@@ -1,14 +1,60 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Modern navbar background for light/dark mode */
+.navbar-bg {
+  background: linear-gradient(90deg, rgba(67,56,202,0.92) 0%, rgba(99,102,241,0.92) 100%);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(99,102,241,0.18);
+}
+html.dark .navbar-bg {
+  background: linear-gradient(90deg, rgba(55,48,163,0.92) 0%, rgba(30,27,75,0.92) 100%);
+  border-bottom: 1px solid rgba(99,102,241,0.28);
+}
+/* Accessibility: focus-visible outlines for all interactive elements */
+a, button, input, textarea, select {
+  outline: none;
+}
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #6366f1aa;
+  z-index: 10;
 }
 
-/* Tailwind/Dark-mode toggle uses the `dark` class on <html> */
-html.dark {
+/* Smooth transitions for cards, buttons, and links */
+.transition-base {
+  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Card hover animation */
+.card-animate {
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s;
+}
+.card-animate:hover, .card-animate:focus-visible {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 32px 0 #6366f133;
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 640px) {
+  .text-4xl, .md\:text-6xl { font-size: 2rem !important; }
+  .text-2xl, .md\:text-2xl { font-size: 1.25rem !important; }
+  .p-8 { padding: 1.25rem !important; }
+}
+@import "tailwindcss";
+
+
+:root {
   --background: #0a0a0a;
   --foreground: #ededed;
+}
+
+html, html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  background: var(--background) !important;
+  color: var(--foreground) !important;
 }
 
 @theme inline {

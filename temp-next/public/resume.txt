@@ -1,4 +1,0 @@
-Suthar Pawankumar
-Full-Stack Developer
-
-Replace this file with your PDF resume at public/resume.pdf to enable download.

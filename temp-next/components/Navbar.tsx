@@ -38,9 +38,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full py-4 px-6 md:px-12 flex items-center justify-between bg-zinc-950/40 backdrop-blur border-b border-zinc-800/40">
+    <header className="sticky top-0 z-40 w-full py-4 px-6 md:px-12 flex items-center justify-between navbar-bg">
       <Link href="/" className="text-lg font-semibold text-zinc-50">
-        Suthar Pawankumar
+        Pawan Suthar
       </Link>
 
 

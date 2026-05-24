@@ -20,6 +20,10 @@ export default function AutoFlow() {
           <li>Integrations for notifications and analytics</li>
         </ul>
       </section>
+      <div className="mt-8 flex gap-4">
+        <a href="https://github.com/code-addicts/AutoFlow" target="_blank" rel="noreferrer" className="px-4 py-2 bg-zinc-800 text-white rounded hover:bg-zinc-700 text-sm">GitHub</a>
+        <a href="https://autoflow-sand.vercel.app/login" target="_blank" rel="noreferrer" className="px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-500 text-sm">Live Demo</a>
+      </div>
     </div>
   );
 }
