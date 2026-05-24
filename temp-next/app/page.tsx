@@ -105,7 +105,6 @@ export default function Portfolio() {
           {/* Skills Section */}
           <div className="md:col-span-4">
             <div className="w-full">
-              {/* @ts-expect-error Async Server Component */}
               {require("@/components/SkillsGrid").default()}
             </div>
           </div>
