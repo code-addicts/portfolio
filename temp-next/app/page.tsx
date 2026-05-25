@@ -1,11 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Transition } from "framer-motion";
 import { ArrowUpRight, Code2, Layout, Mail, Server } from "lucide-react";
 import BentoCard from "@/components/BentoCard";
 import Link from "next/link";
 
 export default function Portfolio() {
+  const springTransition: Transition = { type: 'spring', stiffness: 300 };
   return (
       <main className="min-h-screen bg-zinc-950 text-zinc-50 p-6 md:p-12 font-sans selection:bg-indigo-200 transition-colors duration-300">      <div className="max-w-6xl mx-auto">
         <motion.section initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="py-12">
@@ -71,7 +72,7 @@ export default function Portfolio() {
           </BentoCard>
 
           <Link href="/projects/snapReminder" className="md:col-span-2 rounded-3xl bg-gradient-to-br from-blue-900/20 to-zinc-900/50 border border-blue-900/30 p-8 flex flex-col justify-between group cursor-pointer card-animate focus:outline-none focus:ring-2 focus:ring-blue-600 transition-base" tabIndex={0}>
-            <motion.div whileHover={{ scale: 1.02, y: -4 }} whileTap={{ scale: 0.995 }} transition={{ type: 'spring', stiffness: 300 }}>
+            <motion.div whileHover={{ scale: 1.02, y: -4 }} whileTap={{ scale: 0.995 }} transition={springTransition}>
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-2xl font-semibold text-blue-100">snapReminder</h3>
                 <ArrowUpRight className="text-blue-400 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -86,7 +87,7 @@ export default function Portfolio() {
           </Link>
 
           <Link href="/projects/autoflow" className="md:col-span-2 rounded-3xl bg-gradient-to-br from-emerald-100 to-white dark:from-emerald-900/20 dark:to-zinc-900/50 border border-emerald-200 dark:border-emerald-900/30 p-8 flex flex-col justify-between group cursor-pointer card-animate focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-base" tabIndex={0}>
-            <motion.div whileHover={{ scale: 1.02, y: -4 }} whileTap={{ scale: 0.995 }} transition={{ type: 'spring', stiffness: 300 }}>
+            <motion.div whileHover={{ scale: 1.02, y: -4 }} whileTap={{ scale: 0.995 }} transition={springTransition}>
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-2xl font-semibold text-emerald-800 dark:text-emerald-100">AutoFlow</h3>
                 <ArrowUpRight className="text-emerald-600 dark:text-emerald-400 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />

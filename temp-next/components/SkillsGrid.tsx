@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants, Transition } from "framer-motion";
 import { Code2, Server, Layout, Database, Zap, FileCode2 } from "lucide-react";
 
 const skills = [
@@ -13,20 +13,22 @@ const skills = [
   { name: "TypeScript", icon: <Code2 className="text-blue-500 dark:text-blue-400" size={28} /> },
 ];
 
-const container = {
+const container: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.1 },
+    transition: { staggerChildren: 0.1 } as Transition,
   },
 };
 
-const item = {
+const springTransition: Transition = { type: "spring", stiffness: 300 };
+
+const item: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 300 },
+    transition: springTransition,
   },
 };
 
