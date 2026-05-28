@@ -4,6 +4,7 @@ import { motion, Transition } from "framer-motion";
 import { ArrowUpRight, Code2, Layout, Mail, Server } from "lucide-react";
 import BentoCard from "@/components/BentoCard";
 import Link from "next/link";
+import SkillsGrid from "@/components/SkillsGrid";
 
 export default function Portfolio() {
   const springTransition: Transition = { type: 'spring', stiffness: 300 };
@@ -106,7 +107,7 @@ export default function Portfolio() {
           {/* Skills Section */}
           <div className="md:col-span-4">
             <div className="w-full">
-              {require("@/components/SkillsGrid").default()}
+              <SkillsGrid />
             </div>
           </div>
         </section>
