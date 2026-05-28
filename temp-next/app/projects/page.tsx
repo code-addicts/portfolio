@@ -27,7 +27,7 @@ export default function ProjectsIndex() {
           </ul>
           <div className="flex gap-3 mt-auto">
             <a href="https://github.com/code-addicts/snapReminder" target="_blank" rel="noreferrer" className="text-blue-700 hover:underline text-xs">GitHub</a>
-            {/* <a href="#" className="text-blue-700 hover:underline text-xs">Live Demo</a> */}
+            <a href="https://snapreminder.netlify.app/" target="_blank" rel="noreferrer" className="text-blue-700 hover:underline text-xs">Live Demo</a>
             <Link href="/projects/snapReminder" className="ml-auto text-blue-700 hover:underline text-xs">Details →</Link>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function ProjectsIndex() {
           </ul>
           <div className="flex gap-3 mt-auto">
             <a href="https://github.com/code-addicts/AutoFlow" target="_blank" rel="noreferrer" className="text-emerald-700 hover:underline text-xs">GitHub</a>
-            <a href="https://autoflow-sand.vercel.app/login" target="_blank" rel="noreferrer" className="text-emerald-700 hover:underline text-xs">Live Demo</a>
+            <a href="https://autoflow-teal.vercel.app/login" target="_blank" rel="noreferrer" className="text-emerald-700 hover:underline text-xs">Live Demo</a>
             <Link href="/projects/autoflow" className="ml-auto text-emerald-700 hover:underline text-xs">Details →</Link>
           </div>
         </div>

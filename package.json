@@ -22,4 +22,7 @@
     "postcss": "^8.5.15",
     "tailwindcss": "^4.3.0"
   }
+  ,"overrides": {
+    "glob": "^9.3.5"
+  }
 }
