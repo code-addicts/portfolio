@@ -8,7 +8,7 @@ export default function Footer() {
         <Link href="/" className="hover:text-indigo-600 transition">Home</Link>
         <Link href="/projects" className="hover:text-indigo-600 transition">Projects</Link>
         <Link href="/contact" className="hover:text-indigo-600 transition">Contact</Link>
-        <a href="/resume.txt" download className="hover:text-indigo-600 transition">Resume</a>
+        <a href="/resume.pdf" download className="hover:text-indigo-600 transition">Resume</a>
       </div>
       <div className="flex gap-3 mb-2">
         <a href="mailto:pawansuthar310@gmail.com" className="p-2 bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-50 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition" title="Email">

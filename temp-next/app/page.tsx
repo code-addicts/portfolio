@@ -16,7 +16,7 @@ export default function Portfolio() {
               <h2 className="text-xl md:text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4">Full-Stack Developer | MERN & Automation</h2>
               <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mb-6">Building scalable, intelligent web solutions that bridge real-world challenges with clean, high-performance digital experiences.</p>
               <div className="flex gap-4 flex-wrap mb-4">
-                <a href="/resume.txt" download className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition-all">
+                <a href="/resume.pdf" download className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition-all">
                   Download Resume
                 </a>
                 <Link href="/projects" className="group inline-flex items-center gap-2 px-4 py-2 rounded-md bg-zinc-800 hover:bg-zinc-700 transition-all">
