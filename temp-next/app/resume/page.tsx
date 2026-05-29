@@ -4,7 +4,7 @@ export default function ResumePage() {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/resume.pdf';
-    link.download = 'Pawan_Suthar_Resume.pdf';
+    link.download = 'resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
