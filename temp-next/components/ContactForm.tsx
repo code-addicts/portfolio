@@ -15,12 +15,33 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
     setStatus(null);
-    // Simulate sending (replace with real API/email integration)
-    setTimeout(() => {
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "",
+          ...form,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("Message sent! I'll reply soon.");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("Failed to send message. Please try again later.");
+      }
+    } catch {
+      setStatus("An error occurred. Please try again later.");
+    } finally {
       setLoading(false);
-      setStatus("Message sent! I'll reply soon.");
-      setForm({ name: "", email: "", message: "" });
-    }, 1200);
+    }
   };
 
   return (
